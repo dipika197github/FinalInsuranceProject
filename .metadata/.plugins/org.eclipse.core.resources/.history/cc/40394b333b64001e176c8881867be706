@@ -1,0 +1,121 @@
+package com.insurance.model;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+
+
+
+@Entity
+public class Policy {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int policyId;
+	private String policyNumber;
+	
+	private String policyEffectiveDate;
+	private String policyExpiryDate;
+	private String payment_Option;
+	private Double totalAmount;
+	private Boolean status;
+	private String createdDate;
+	private String additionalInfo;
+	
+	
+	public int getPolicyId() {
+		return policyId;
+	}
+
+
+	public void setPolicyId(int policyId) {
+		this.policyId = policyId;
+	}
+
+
+	public String getPolicyNumber() {
+		return policyNumber;
+	}
+
+
+	public void setPolicyNumber(String policyNumber) {
+		this.policyNumber = policyNumber;
+	}
+
+
+	public String getPolicyEffectiveDate() {
+		return policyEffectiveDate;
+	}
+
+
+	public void setPolicyEffectiveDate(String policyEffectiveDate) {
+		this.policyEffectiveDate = policyEffectiveDate;
+	}
+
+
+	public String getPolicyExpiryDate() {
+		return policyExpiryDate;
+	}
+
+
+	public void setPolicyExpiryDate(String policyExpiryDate) {
+		this.policyExpiryDate = policyExpiryDate;
+	}
+
+
+	public String getPayment_Option() {
+		return payment_Option;
+	}
+
+
+	public void setPayment_Option(String payment_Option) {
+		this.payment_Option = payment_Option;
+	}
+
+
+	public Double getTotalAmount() {
+		return totalAmount;
+	}
+
+
+	public void setTotalAmount(Double totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+
+	public Boolean getStatus() {
+		return status;
+	}
+
+
+	public void setStatus(Boolean status) {
+		this.status = status;
+	}
+
+
+	public String getCreatedDate() {
+		return createdDate;
+	}
+
+
+	public void setCreatedDate(String createdDate) {
+		this.createdDate = createdDate;
+	}
+
+
+	public String getAdditionalInfo() {
+		return additionalInfo;
+	}
+
+
+	public void setAdditionalInfo(String additionalInfo) {
+		this.additionalInfo = additionalInfo;
+	}
+
+
+	
+}

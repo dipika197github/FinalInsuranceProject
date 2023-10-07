@@ -1,0 +1,22 @@
+package com.insurance.service;
+
+import java.util.List;
+
+import com.insurance.model.User;
+
+public interface UserService {
+
+	// save user
+	public User saveUser(User user);
+
+	public User updateUser(User user);
+
+	// getUser
+	public User findByUserId(int id);
+
+	//// Build the Restful API to delete the user details from database
+	public void deleteByUserId(int id);
+
+	//Build the Restful API to get user details from database
+	public List<User> getAllUserDetails();
+}

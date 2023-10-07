@@ -1,0 +1,30 @@
+package com.insurance.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.insurance.model.User;
+import com.insurance.service.UserService;
+
+@RestController
+public class UserPolicyController {
+
+	@Autowired
+	private UserService userService;
+	@PostMapping("/saveUser")
+	public User SaveUser(@RequestBody User user) {
+		 User users=userService.SaveUser(user);
+		return users;
+		
+	}
+	@GetMapping("/findByUserId/{id}")
+	public User findByUserId(@PathVariable("id") int id) {
+		User user=userService.findByUserId(id);
+		return user;
+		
+	}
+}

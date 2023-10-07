@@ -1,0 +1,20 @@
+package com.insurance.service;
+
+import com.insurance.model.User;
+
+public interface UserService {
+	
+	//save user
+	public User saveUser(User user);
+	
+	//updateUser
+	public User updateUser(User user);
+	
+	//getUser
+	public User findByUserId(int id);
+	
+	//deleteUser
+	public void deleteByUserId(int id);
+	
+
+}

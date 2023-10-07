@@ -1,0 +1,12 @@
+package com.insurance.service;
+
+import com.insurance.model.User;
+
+public interface UserService {
+	public User SaveUser(User user);
+	public User findByUserId(int id);
+	
+	public User deketeByUserId(int id);
+	
+
+}
