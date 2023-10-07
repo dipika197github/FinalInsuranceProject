@@ -42,8 +42,6 @@ public class PolicyServiceImpl implements PolicyService{
 	@Override
 	public void deleteAllPolicyDetailse() {
 		policyRepository.deleteAll();
-		
 	}
-	
 
 }
