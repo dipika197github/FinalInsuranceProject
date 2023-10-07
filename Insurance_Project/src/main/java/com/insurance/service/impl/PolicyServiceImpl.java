@@ -21,6 +21,7 @@ public class PolicyServiceImpl implements PolicyService{
 	}
 	@Override
 	public Policy updatePolicy(Policy policy) {
+		System.out.println("this is service imp");
 		Policy policyUpdate= policyRepository.save(policy);
 		return policyUpdate;
 	}
