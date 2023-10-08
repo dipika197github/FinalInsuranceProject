@@ -150,4 +150,17 @@ public class UserPolicyController {
 		}
 
 	}
+	@GetMapping("/updatePassword/{email}")
+	public boolean updatePassword(@PathVariable("email") String email,@RequestParam("password") String password) throws Exception {
+		User user=userService.getEmail(email);
+		if(user != null) {
+			user.setPassword(password);
+			userService.updateUser(user);
+			return true;
+			
+		}
+		return false;
+		
+	}
+
 }
