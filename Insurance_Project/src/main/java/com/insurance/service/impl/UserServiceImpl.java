@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	@Override
-	public User findByUserId(int id) {
+	public User getUser(int id) {
 		User user=userRepository.findById(id);
 		return user;
 	}
@@ -39,6 +39,7 @@ public class UserServiceImpl implements UserService{
 		List<User> userList=userRepository.findAll();
 		return userList;
 	}
+	
 	
 	
 	
