@@ -1,5 +1,6 @@
 package com.insurance.service;
 
+import java.util.Date;
 import java.util.List;
 
 import com.insurance.model.Premium;
@@ -20,5 +21,11 @@ public interface PremiumService {
 
 	// Design API to delete premium details from database
 	public void deleteByPremiumId(int id);
+	
+	/*/
+	 * Build the Restful web service to get all the policy premium details
+	 *  for specific duration
+	 */
+	List<Premium> getPremiumsInDuration(Date startDate, Date endDate);
 
 }

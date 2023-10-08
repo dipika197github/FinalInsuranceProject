@@ -8,5 +8,6 @@ import com.insurance.model.Policy;
 public interface PolicyRepository extends JpaRepository<Policy, Integer>{
 	
 	public Policy findById(int id);
+	
 
 }

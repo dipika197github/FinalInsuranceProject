@@ -1,5 +1,6 @@
 package com.insurance.service.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +38,11 @@ public class PremiumServiceImpl implements PremiumService{
 	public List<Premium> getPremiumById(int id) {
 		List<Premium> premiumList=premiumRepository.findById(id);
 		return premiumList;
+	}
+	@Override
+	public List<Premium> getPremiumsInDuration(Date startDate, Date endDate) {
+		List<Premium> premiumsDuration=premiumRepository.findByPolicyCommencementDateBetween(startDate, endDate);
+		return premiumsDuration;
 	}
 
 }
